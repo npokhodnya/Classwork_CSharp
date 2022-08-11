@@ -5,6 +5,6 @@ int num = int.Parse(Console.ReadLine());
 int count = 1;
 while(count<=num)
 {
-    Console.WriteLine(count*count);
+    Console.WriteLine($"{count}^2 = {count*count}");
     count++;
 }
