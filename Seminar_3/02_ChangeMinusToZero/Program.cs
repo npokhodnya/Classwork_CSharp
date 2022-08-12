@@ -9,7 +9,6 @@ void ChangeArray(int[] array)
         index++;
     }
 }
-
 void PrintArray(int[] array)
 {
     int count = 0;
@@ -20,11 +19,20 @@ void PrintArray(int[] array)
         count++;
     }
 }
-Random rand = new Random();
-int[] array = new int[] {rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61), rand.Next(-99, 61)};
-Console.WriteLine($"Список до: ");
+void FillArray(int[] array)
+{
+    int index = 0;
+    while (index < array.Length)
+    {
+        array[index] = new Random().Next(-99, 61);
+        index++;
+    }
+}
+int[] array = new int[10];
+FillArray(array);
+Console.WriteLine("Список до: ");
 PrintArray(array);
-Console.WriteLine("");
-Console.WriteLine($"Список после: ");
+Console.WriteLine();
 ChangeArray(array);
+Console.WriteLine("Список после: ");
 PrintArray(array);
