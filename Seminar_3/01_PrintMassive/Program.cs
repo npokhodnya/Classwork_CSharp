@@ -5,16 +5,9 @@ void PrintArray(int[] array)
     int count = 0;
     while (count < array.Length)
     {
-        if (count+1 == array.Length)
-        {
-            Console.Write($"{array[count]}!");
-        }
-        else
-        {
-            Console.Write($"{array[count]}, ");
-        }
+        if (count+1 == array.Length) Console.Write($"{array[count]}!");
+        else Console.Write($"{array[count]}, ");
         count++;
-       
     }
 }
 
