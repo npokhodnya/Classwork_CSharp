@@ -19,17 +19,17 @@ void PrintArray(int[] array)
         count++;
     }
 }
-void FillArray(int[] array)
+void FillArrayInt(int[] array, int min, int max)
 {
     int index = 0;
     while (index < array.Length)
     {
-        array[index] = new Random().Next(-99, 61);
+        array[index] = new Random().Next(min, max+1);
         index++;
     }
 }
 int[] array = new int[10];
-FillArray(array);
+FillArrayInt(array, -99, 60);
 Console.WriteLine("Список до: ");
 PrintArray(array);
 Console.WriteLine();
